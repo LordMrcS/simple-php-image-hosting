@@ -43,7 +43,7 @@ $baseurl = $_SERVER['HTTP_HOST'].dirname($_SERVER['REQUEST_URI']).'/'.$filedir;
 			$imgurl = 'http://'.$baseurl.'/'.$newname;
 			print '<br />';
 			print 'Your URL:<br />';
-			print '<input type="text" value="'.$imgurl.'" ><br /><br />';
+			print '<input onClick="this.setSelectionRange(0, this.value.length)" type="text" value="'.$imgurl.'" ><br /><br />';
 			print '<a href="'.$imgurl.'"><img src="'.$imgurl.'" /></a><br />';
 		}
 
