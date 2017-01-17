@@ -39,7 +39,6 @@ $baseurl = $_SERVER['HTTP_HOST'].dirname($_SERVER['REQUEST_URI']).'/'.$filedir;
 			$md5 = substr(md5_file($_FILES['file']['tmp_name']), 0, 7);
 			$newname = time().$md5.'.'.$ext;
 			move_uploaded_file($_FILES['file']['tmp_name'], $filedir.'/'.$newname);
-			$baseurl = $_SERVER['HTTP_HOST'].dirname($_SERVER['REQUEST_URI']).'/'.$filedir;
 			$imgurl = 'http://'.$baseurl.'/'.$newname;
 			print '<br />';
 			print 'Your URL:<br />';
